@@ -7,6 +7,7 @@ import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import PrivacyPolicy from "./pages/privacy-policy/PrivacyPolicy";
 import TermsConditions from "./pages/terms-condition/TermsConditions";
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 function ScrollToTop() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function ScrollToTop() {
 }
 
 function App() {
+  injectSpeedInsights();
   return (
     <>
       <BrowserRouter>
