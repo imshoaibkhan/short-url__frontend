@@ -1,0 +1,228 @@
+.homepage-section {
+  background-color: #fbe8de;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  padding: 2rem 0;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 1rem;
+}
+
+.container-header {
+  width: 70%;
+  margin-bottom: 4rem;
+}
+
+.container-header .homepage-title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.container-header .homepage-desc {
+  font-size: 1rem;
+  padding: 0 5rem;
+  text-align: center;
+}
+
+.search-box-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 500px;
+  font-size: 1rem;
+  padding: 0.94rem;
+  border: 2px solid #00000097;
+  border-right: none;
+  outline: none;
+}
+
+button {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  background-color: #0fa958;
+  color: #fff;
+  border: 2px solid #00000073;
+  cursor: pointer;
+}
+
+.search-box-result {
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 628px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.search-box-result .shorten-url {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-right: 1rem;
+  padding: 10px;
+  background-color: #e6e5e5;
+  border: 1px solid #00000083;
+}
+
+.search-box-result .copy-clipboard {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.copy-clipboard .fa-copy {
+  padding: 6px 11px;
+  margin-right: 1rem;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 29px;
+  border: 2px solid #00000083;
+  background-color: #6488ea;
+}
+
+.copy-clipboard .fa-check {
+  font-size: 29px;
+  color: #fff;
+  margin-right: 1rem;
+  border-radius: 10px;
+  padding: 6px 11px;
+  border: 2px solid #00000083;
+  background-color: #0fa958;
+  animation: popUp 0.5s ease-in-out;
+}
+
+.copy-clipboard .fa-link {
+  font-size: 25px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid #00000083;
+  background-color: #0fa958;
+}
+
+.fa-copy:active {
+  transform: scale(1.1);
+}
+
+.search-box-result .error-message {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.search-box-result .result-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box-result .result-box .result-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.result-box .again-btn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-box .again-btn button {
+  padding: 10px 20px;
+}
+
+@media (max-width: 1024px) {
+  .homepage-section {
+    height: fit-content;
+  }
+
+  .container-header {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .container-header .homepage-title {
+    font-size: 2.5rem;
+  }
+
+  .container-header .homepage-desc {
+    font-size: 1rem;
+    padding: 0 5rem;
+  }
+
+  .search-box-result {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-section {
+    height: calc(100vh - 60px);
+  }
+
+  .container-header {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .container-header .homepage-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .container-header .homepage-desc {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  input[type="text"] {
+    width: 290px;
+    padding: 0.95rem;
+  }
+
+  .search-box-result {
+    width: 340px;
+    height: 200px;
+  }
+
+  .search-box-result .result-box .result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .search-box-result .shorten-url {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    margin: 0 0.5rem;
+  }
+
+  .search-box-result .copy-clipboard {
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 453px) {
+  button {
+    padding: 6px;
+  }
+}

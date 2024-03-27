@@ -1,0 +1,60 @@
+.contact-page {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: #fbe8de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 50%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container .contact-header {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.contact-container .contact-message {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact-container button {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.contact-container button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    width: 90%;
+    padding: 0;
+  }
+  .contact-container .contact-message {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

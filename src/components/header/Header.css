@@ -1,0 +1,133 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  border-right: 1px solid black;
+  cursor: pointer;
+}
+
+.logo-section .logo-container {
+  width: 150px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-section .logo-container .logo {
+  object-fit: cover;
+  width: 50px;
+  margin: 5px;
+  background: transparent;
+}
+
+.logo-section .logo-container span {
+  font-size: 1.2rem;
+  color: #0fa958;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.navbar-section {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-section ul,
+.share-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navbar-section ul li {
+  margin: 0 0.5rem;
+}
+
+.navbar-section li a {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.15s ease-in;
+}
+
+.navbar-section li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.share-section {
+  width: 150px;
+  border-left: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-section ul li {
+  padding: 0.5rem;
+}
+
+.share-section ul li i {
+  font-size: 1.3rem;
+}
+
+.navbar-mobile {
+  display: none;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .navbar-section {
+    display: none;
+  }
+
+  .navbar-active {
+    display: flex;
+    z-index: 99;
+  }
+
+  .navbar-active ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .navbar-active ul li {
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .share-section {
+    display: none;
+  }
+
+  .navbar-mobile {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-mobile i {
+    font-size: 1.5rem;
+  }
+}
