@@ -1,12 +1,15 @@
 // urlSlice.js
-import { createSlice, createAsyncThunk, createAction  } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const generateShortUrl = createAsyncThunk(
   "url/generateShortUrl",
   async (longUrl, { rejectWithValue }) => {
     try {
-      const response = await axios.post("https://shorturl-backend-fm3i.onrender.com", { originalUrl: longUrl });
+      const response = await axios.post(
+        "https://shorturl-backend-fm3i.onrender.com/url/shorten",
+        { originalUrl: longUrl }
+      );
       return response.data.shortUrl;
     } catch (error) {
       return rejectWithValue(error.response.data.error);
