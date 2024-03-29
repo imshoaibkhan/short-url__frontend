@@ -12,4 +12,21 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+ <!-- Google tag (gtag.js) -->
+ <script type="module">
+  (function() {
+    var googleAnalyticsId = `${import.meta.env.VITE_GOOGLE_ANALYTICS}`;
+    console.log(googleAnalyticsId)
+    var scriptTag = document.createElement('script');
+    scriptTag.async = true;
+    scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleAnalyticsId;
+    document.head.appendChild(scriptTag);
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', googleAnalyticsId);
+  })();
+</script>
 </html>
