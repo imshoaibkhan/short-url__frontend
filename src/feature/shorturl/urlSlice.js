@@ -7,7 +7,7 @@ export const generateShortUrl = createAsyncThunk(
   async (longUrl, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_SERVER_ENDPOINT}`,
+        `https://short-urlbackend-production.up.railway.app/url/shorten`,
         { originalUrl: longUrl }
       );
       return response.data.shortUrl;
