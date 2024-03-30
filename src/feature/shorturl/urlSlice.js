@@ -7,7 +7,7 @@ export const generateShortUrl = createAsyncThunk(
   async (longUrl, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "https://shorturl-backend-fm3i.onrender.com/url/shorten",
+        `${import.meta.env.VITE_SERVER_ENDPOINT}`,
         { originalUrl: longUrl }
       );
       return response.data.shortUrl;
